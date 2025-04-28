@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>$LAGGER - Lag Hard, Pump Harder</title>
+  <style>
+    :root {
+      --primary: #00ff88;
+      --accent: #ff00ff;
+      --background: #0f0f0f;
+      --text: #ffffff;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--background);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    header {
+      margin-top: 2rem;
+    }
+    h1 {
+      font-size: 3rem;
+      background: linear-gradient(45deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px var(--primary); }
+      to { text-shadow: 0 0 20px var(--accent); }
+    }
+    p.slogan {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      opacity: 0.8;
+    }
+    .gif {
+      margin-top: 2rem;
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px var(--primary);
+    }
+    .button, .donate-button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background: var(--accent);
+      border: none;
+      border-radius: 12px;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .button:hover, .donate-button:hover {
+      background: var(--primary);
+    }
+    .countdown {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+    .sections {
+      margin-top: 3rem;
+      max-width: 800px;
+      padding: 0 1rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .tokenomics, .roadmap {
+      background: #1c1c1c;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .gallery img {
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px var(--primary);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .social-links a {
+      margin: 0 10px;
+      font-size: 2rem;
+      color: var(--accent);
+      transition: color 0.3s;
+      text-decoration: none;
+    }
+    .social-links a:hover {
+      color: var(--primary);
+    }
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.5rem; }
+      .button, .donate-button { font-size: 1rem; padding: 0.8rem 1.2rem; }
+      .gif { width: 200px; }
+      .gallery img { width: 200px; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1>$LAGGER</h1>
+  <p class="slogan">Lag Hard. Pump Harder. 🐢🚀</p>
+</header>
+
+<img src="https://media.giphy.com/media/f9k1tV7HyORcngKF8v/giphy.gif" alt="Turtle Rocket" class="gif">
+
+<div class="countdown" id="countdown">Launch in 3 months 🚀🐢</div>
+
+<a class="button">Launching Soon...</a>
+
+<a href="#" onclick="alert('Donate Wallet: E8wAw1SZWe5Y8NW2T8oTEgCRe961jmN1YYEhWTs76exM');" class="donate-button">Donate to Support 🚀</a>
+
+<div class="sections">
+
+  <h2>Tokenomics</h2>
+  <div class="tokenomics">
+    🐢 1,000,000,000 Total Supply<br>
+    🚀 50% Fair Launch<br>
+    🛡️ 30% Community Rewards<br>
+    🛠️ 20% Dev & Marketing
+  </div>
+
+  <h2>Roadmap</h2>
+  <div class="roadmap">
+    ✅ Launch and meme blast<br>
+    ✅ Listings on DEX<br>
+    🚀 Viral marketing campaigns<br>
+    🎉 Real-life turtle race event
+  </div>
+
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="https://i.imgur.com/ZCdzBIr.png" alt="Gallery Image 1">
+    <img src="https://i.imgur.com/nMbNTWU.png" alt="Gallery Image 2">
+    <img src="https://i.imgur.com/Qnhzcdo.png" alt="Gallery Image 3">
+  </div>
+
+  <div class="social-links">
+    <a href="https://twitter.com/" target="_blank">🐦</a>
+    <a href="https://t.me/" target="_blank">💬</a>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 $LAGGER. Slow and steady wins the pump. 🐢
+</footer>
+
+<script>
+  const countdownEl = document.getElementById('countdown');
+  const launchDate = new Date();
+  launchDate.setMonth(launchDate.getMonth() + 3);
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = launchDate - now;
+
+    if (diff <= 0) {
+      countdownEl.textContent = 'Launched! 🚀🐢';
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    countdownEl.textContent = `Launching in ${days}d ${hours}h ${minutes}m ${seconds}s 🚀🐢`;
+  }
+
+  setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
